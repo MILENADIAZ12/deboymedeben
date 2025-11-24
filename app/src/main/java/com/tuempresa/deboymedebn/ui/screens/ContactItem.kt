@@ -41,7 +41,7 @@ fun ContactItem(
     ) {
         Column(Modifier.padding(16.dp)) {
 
-            // --- Nombre + monto ---
+            // pantalla para añadir contacto (nombre,descripcion,monto,fecha limite)
             Row(
                 Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -62,7 +62,7 @@ fun ContactItem(
 
             Spacer(Modifier.height(6.dp))
 
-            // Fecha límite
+
             if (contact.dueDate.isNotBlank()) {
                 Text(
                     "Fecha límite: ${contact.dueDate}",
@@ -70,7 +70,7 @@ fun ContactItem(
                 )
             }
 
-            // Descripción
+
             if (contact.description.isNotBlank()) {
                 Spacer(Modifier.height(6.dp))
                 Text(
@@ -103,7 +103,7 @@ fun ContactItem(
 
                 Row {
 
-                    // Botón PAGAR
+                    // Botón pagar
                     if (!contact.isPaid) {
                         Button(
                             onClick = {
@@ -133,7 +133,7 @@ fun ContactItem(
         }
     }
 
-    // --- DIÁLOGO CONFIRMACIÓN ---
+    // CONFIRMAR
     if (showDialog) {
         AlertDialog(
             onDismissRequest = { showDialog = false },

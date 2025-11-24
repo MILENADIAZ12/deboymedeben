@@ -27,7 +27,7 @@ class DebtsViewModel : ViewModel() {
             .addOnFailureListener { onResult(false) }
     }
 
-    //  OBTENER TODAS LAS DEUDAS DEL USUARIO
+    //  Obtener las deudas del usuario
     fun getDebts(onResult: (List<Debt>) -> Unit) {
         if (uid == null) { onResult(emptyList()); return }
 

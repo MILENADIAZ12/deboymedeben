@@ -37,7 +37,7 @@ android {
 
 dependencies {
 
-    // ------- ROOM (Compatible con Kotlin 1.9 + KSP 1.9) -------
+    //  ROOM
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")

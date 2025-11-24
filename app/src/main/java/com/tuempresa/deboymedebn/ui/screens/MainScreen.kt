@@ -83,7 +83,7 @@ fun MainScreen(
                         label = { Text("Home") }
                     )
 
-                    // PERFIL (solo el icono aquí)
+                    // PERFIL sencillo sin pantalla
                     NavigationBarItem(
                         selected = false,
                         onClick = { showMenu = true },
@@ -100,7 +100,7 @@ fun MainScreen(
                     )
                 }
 
-                // ESTE MENÚ VA FUERA DEL NAVIGATIONBAR
+             //opciones de perfil tiene un despliegue de dos opciones (el correo de la cuenta,cerrar secion)
                 DropdownMenu(
                     expanded = showMenu,
                     onDismissRequest = { showMenu = false }

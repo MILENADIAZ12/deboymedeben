@@ -8,11 +8,11 @@ class AuthViewModel : ViewModel() {
 
     private val auth = FirebaseAuth.getInstance()
 
-    // DEVUELVE EL USUARIO ACTUAL COMPLETO
+
     val currentUser: FirebaseUser?
         get() = auth.currentUser
 
-    // Función para iniciar sesión
+    // iniciar sesión
     fun login(
         email: String,
         password: String,
@@ -29,7 +29,7 @@ class AuthViewModel : ViewModel() {
             }
     }
 
-    // Función para registrar un usuario
+    // registrar un usuario
     fun register(
         email: String,
         password: String,

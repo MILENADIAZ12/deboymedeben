@@ -21,10 +21,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Permiso notificaciones Android 13+
+        // Permiso de notificaciones
         askNotificationPermission()
 
-        // Programar notificación diaria a las 20:00
+        // Programar notificación diaria a las 8 de la noche
         scheduleDailyNotification()
 
         setContent {
@@ -74,7 +74,7 @@ class MainActivity : ComponentActivity() {
             .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
             .build()
 
-        // Enqueue sin duplicar jobs
+
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
             "daily_notification_job",
             ExistingPeriodicWorkPolicy.UPDATE,

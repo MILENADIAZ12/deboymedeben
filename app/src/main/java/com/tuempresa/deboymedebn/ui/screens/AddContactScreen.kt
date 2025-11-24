@@ -86,9 +86,7 @@ fun AddContactScreen(
                 .padding(16.dp)
         ) {
 
-            // =============================
-            // BUSQUEDA DE CONTACTOS
-            // =============================
+           //buscar contacto
             OutlinedTextField(
                 value = name,
                 onValueChange = {
@@ -120,9 +118,7 @@ fun AddContactScreen(
                 }
             }
 
-            // =============================
-            // CAMPOS
-            // =============================
+         //campos para agregar contacto
             Spacer(Modifier.height(8.dp))
 
             OutlinedTextField(
@@ -165,7 +161,7 @@ fun AddContactScreen(
             var expandedMonth by remember { mutableStateOf(false) }
             var expandedYear by remember { mutableStateOf(false) }
 
-// Cuando cambie alguno → actualizamos el dueDate final
+
             LaunchedEffect(selectedDay, selectedMonth, selectedYear) {
                 if (selectedDay != null && selectedMonth != null && selectedYear != null) {
                     dueDate = "${selectedDay}/${selectedMonth}/${selectedYear}"
@@ -177,7 +173,7 @@ fun AddContactScreen(
 
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
 
-                // ---- DÍA ----
+                // dia
                 Box {
                     OutlinedButton(
                         onClick = { expandedDay = true },
@@ -202,7 +198,7 @@ fun AddContactScreen(
                     }
                 }
 
-                // ---- MES ----
+                // mes
                 Box {
                     OutlinedButton(
                         onClick = { expandedMonth = true },
@@ -227,7 +223,7 @@ fun AddContactScreen(
                     }
                 }
 
-                // ---- AÑO ----
+                //año
                 Box {
                     OutlinedButton(
                         onClick = { expandedYear = true },
@@ -256,9 +252,7 @@ fun AddContactScreen(
 
             Spacer(Modifier.height(8.dp))
 
-            // =============================
-            // RADIO BUTTONS
-            // =============================
+           //diseño de botones
             Row {
                 RadioButton(
                     selected = type == "meDeben",
@@ -275,9 +269,7 @@ fun AddContactScreen(
                 Text("Debo")
             }
 
-            // =============================
-            // VALIDACIONES
-            // =============================
+           //valdar si se lleno la info del contacto
             if (showErrors && name.isBlank())
                 Text("El nombre es obligatorio", color = MaterialTheme.colorScheme.error)
 
@@ -286,9 +278,7 @@ fun AddContactScreen(
 
             Spacer(Modifier.height(16.dp))
 
-            // =============================
-            // GUARDAR
-            // =============================
+       //guardar
             Button(
                 onClick = {
 
@@ -320,9 +310,7 @@ fun AddContactScreen(
     }
 }
 
-// =============================
-// BUSQUEDA DE CONTACTOS
-// =============================
+//Buscar contactos del celular
 fun searchContacts(context: Context, query: String): List<Pair<String, String>> {
     if (query.isBlank()) return emptyList()
 
