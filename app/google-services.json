@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069581510621",
+    "project_id": "deboymedebn",
+    "storage_bucket": "deboymedebn.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069581510621:android:6328ed8f55830188443834",
+        "android_client_info": {
+          "package_name": "com.tuempresa.deboymedebn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcF4ZKTHVHN19j7LCulSLohKrm8wFxLXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
